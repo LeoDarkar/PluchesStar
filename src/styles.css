@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* components.css */
+:root {
+  --bg-color: white;
+  --text-color: black;
+  --nav-bg-color: white;
+  --nav-text-color: gray-900;
+  --nav-hover-text-color: gray-700;
+  --button-bg-color: gray-200;
+}
+
+.dark {
+  --bg-color: #1a202c; /* gray-900 */
+  --text-color: white;
+  --nav-bg-color: #1a202c; /* gray-900 */
+  --nav-text-color: #d1d5db; /* gray-300 */
+  --nav-hover-text-color: white;
+  --button-bg-color: #4a5568; /* gray-700 */
+}
+
