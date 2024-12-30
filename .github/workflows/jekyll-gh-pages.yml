@@ -31,7 +31,10 @@ jobs:
         run: npm install
 
       - name: Build the project
-        run: npm run build -- --output-path docs --base-href ./
+        run: npm run build -- --output-path src --base-href ./
+
+      - name: Verify index.html
+        run: ls docs/browser/index.html  # Verifica que el archivo index.html existe
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
