@@ -6,11 +6,6 @@ export const routes: Routes = [
         loadComponent: () => import('./shared/components/layout/layout.component'),
         children: [
             {
-                path: '',
-                redirectTo: 'sections',
-                pathMatch: 'full'
-            },
-            {
                 path: 'sections',
                 loadComponent: () => import('./business/sections/sections.component'),
             },
@@ -25,7 +20,7 @@ export const routes: Routes = [
         ]
     },
     {
-        path: 'sections/**',
+        path: 'PluchesStar/**',
         redirectTo: '',
         pathMatch: 'prefix'
     },
