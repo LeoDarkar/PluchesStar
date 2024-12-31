@@ -20,7 +20,7 @@ export const routes: Routes = [
             },
             {
                 path: '',
-                redirectTo: '/',
+                redirectTo: 'sections',
                 pathMatch: 'full'
             }
             
@@ -29,6 +29,6 @@ export const routes: Routes = [
     },
     {
         path: '**',
-        redirectTo: '/'
+        redirectTo: 'sections'
     }
 ];
