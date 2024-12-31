@@ -7,16 +7,21 @@ export const routes: Routes = [
         loadComponent: () => import('./shared/components/layout/layout.component'),
         children: [
             {
-                path:'sections',
+                path: 'sections',
                 loadComponent: () => import('./business/sections/sections.component'),
             },
             {
-                path:'profile',
+                path: 'profile',
                 loadComponent: () => import('./business/profile/profile.component')
             },
             {
-                path:'tables',
+                path: 'tables',
                 loadComponent: () => import('./business/tables/tables.component')
+            },
+            {
+                path: '',
+                redirectTo: 'sections',
+                pathMatch: 'full'
             }
         ]
     },
