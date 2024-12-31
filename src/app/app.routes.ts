@@ -7,8 +7,13 @@ export const routes: Routes = [
         loadComponent: () => import('./shared/components/layout/layout.component'),
         children: [
             {
+                path:'',
+                loadComponent: () => import('./shared/components/layout/layout.component'),
+            },
+            
+            {
                 path:'sections',
-                loadComponent: () => import('./business/sections/sections.component'),
+                loadComponent: () => import('./shared/components/layout/layout.component'),
             },
             {
                 path:'profile',
