@@ -25,13 +25,13 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '18'  # Actualiza a la versión 18
+          node-version: '18'
 
       - name: Install dependencies
         run: npm install
 
       - name: Build the project
-        run: npm run build -- --output-path docs --base-href ./
+        run: npm run build -- --output-path docs/browser --base-href ./
 
       - name: Verify index.html
         run: ls docs/browser/index.html  # Verifica que el archivo index.html existe
