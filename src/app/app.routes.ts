@@ -1,6 +1,5 @@
 import { Routes } from '@angular/router';
 
-
 export const routes: Routes = [
     {
         path: '',
@@ -10,10 +9,25 @@ export const routes: Routes = [
                 path: '',
                 redirectTo: 'sections',
                 pathMatch: 'full'
+            },
+            {
+                path: 'sections',
+                loadComponent: () => import('./business/sections/sections.component'),
+            },
+            {
+                path: 'profile',
+                loadComponent: () => import('./business/profile/profile.component')
+            },
+            {
+                path: 'tables',
+                loadComponent: () => import('./business/tables/tables.component')
             }
-            
-
         ]
+    },
+    {
+        path: 'sections/**',
+        redirectTo: '',
+        pathMatch: 'prefix'
     },
     {
         path: '**',
