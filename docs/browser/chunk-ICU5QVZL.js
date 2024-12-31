@@ -1,1 +1,0 @@
-import{Da as i,Ea as r,Ha as a,Ka as p,V as n}from"./chunk-6EHVDNE7.js";var t=class o{static \u0275fac=function(e){return new(e||o)};static \u0275cmp=n({type:o,selectors:[["app-profile"]],standalone:!0,features:[p],decls:2,vars:0,template:function(e,l){e&1&&(i(0,"p"),a(1,"profile works!"),r())}})};export{t as default};
