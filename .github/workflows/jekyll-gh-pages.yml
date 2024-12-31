@@ -31,7 +31,7 @@ jobs:
         run: npm install
 
       - name: Build the project
-        run: npm run build -- --output-path src --base-href ./
+        run: npm run build -- --output-path docs --base-href ./
 
       - name: Verify index.html
         run: ls docs/browser/index.html  # Verifica que el archivo index.html existe
@@ -39,7 +39,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: docs
+          path: docs/browser
 
   deploy:
     environment:
@@ -53,3 +53,4 @@ jobs:
         uses: actions/deploy-pages@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs/browser
