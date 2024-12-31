@@ -4,9 +4,9 @@
     <p class="mx-auto mt-2 max-w-lg text-balance text-center text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl">Peluches Originales y Personalizados</p>
     <div class="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
       <div class="relative lg:row-span-2">
-        <div class="absolute inset-px rounded-lg bg-white lg:rounded-l-[2rem]"></div>
+        <div class="absolute inset-px rounded-lg lg:rounded-l-[2rem]" [style.background-image]="'url(' + ImagenFondoOso + ')'" style="background-size: contain; background-position: top;"></div>
         <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
-          <div class="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10 ring-violet-400">
+          <div class="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10 ">
             <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 text-center ">¿Buscas algo único o quieres el peluche más popular del momento?</p>
             <p class="mt-2 max-w-lg text-sm/6 text-gray-600 text-center">Contactanos para adquirir nuestros productos.</p>
           </div>
@@ -18,21 +18,21 @@
         </div>
         <div class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 lg:rounded-l-[2rem]"></div>
       </div>
-      <div class="relative max-lg:row-start-2 align-middle">
-        <div class="absolute inset-px rounded-lg bg-white max-lg:rounded-t-[2rem]"></div>
-        <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] justify-center">
-          <div class="px-8 sm:px-10 max-lg:pb-12 lg:pb-2">
-            <p class="mt-2 text-xl font-medium tracking-tight text-gray-950 text-center">Fabricación</p>
+      <div class="relative max-lg:row-start-2 align-middle " >
+        <div class="absolute inset-px rounded-lg  max-lg:rounded-t-[2rem]" [style.background-image]="'url(' + ImagenFondoOso + ')'" style="background-size: contain; background-position: center;" ></div>
+        <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] justify-center" >
+            <div class="px-8 sm:px-10 max-lg:pb-12 lg:pb-2 "  >
+            <p class="mt-2 text-xl font-medium tracking-tight text-gray-950 text-center py-4">Fabricación</p>
             <p class="mt-2 max-w-lg text-lg text-gray-600 text-center"><b>Normal:</b> 3 - 4 días.</p>
             <p class="mt-2 max-w-lg text-lg text-gray-600 text-center"><b>Personalizados:</b> 5 - 10 días.</p>
           </div>
         </div>
         <div class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-t-[2rem]"></div>
       </div>
-      <div class="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2">
-        <div class="absolute inset-px rounded-lg bg-white"></div>
-        <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]">
-          <div class="px-8 pt-8 sm:px-10 sm:pt-10">
+      <div class="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2 " [style.background-image]="'url(' + ImagenFondoOso + ')'" style="background-size: contain; background-position: top;">
+        <div class="absolute inset-px rounded-lg"></div>
+        <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]" >
+          <div class="px-8 pt-8 sm:px-10 sm:pt-10" >
             <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 text-center">Envios</p>
             <p class="mt-2 max-w-lg text-sm/6 text-gray-600 text-center pb-4">Realizamos envios a todo Ecuador por Servientrega y dentro de Quito por UberEntregas.</p>
           </div>
@@ -49,14 +49,14 @@
       </div>
       <div class="relative lg:row-span-2">
         <div class="absolute inset-px rounded-lg bg-white max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]"></div>
-        <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]">
-          <div class="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
+        <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]" [style.background-image]="'url(' + ImagenFondoOso + ')'" style="background-size: contain; background-position: top;">
+          <div class="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10" >
             <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 text-center">Calificanos y Siguenos</p>
             <p class="mt-2 max-w-lg text-sm/6 text-gray-600 text-center">Puedes seguirnos en nuestras redes sociales y dejarnos tus comentarios.</p>
           </div>
           <div class="relative min-h-[30rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm">
             <div class="absolute inset-x-10 bottom-0 top-10 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
-              <img class="size-full object-top object-fill" src="https://blogger.googleusercontent.com/img/a/AVvXsEgM76gvvatmPbU5AKKLQwj2yOzgU3nlJm6CeWLH81-7gFTGbbe8W2-V-Gn2F15JCqAd47ZF0IXHEEj6c76MhP72wtU7RQx_Fx_Uc5mXaetyy46UUGRCPJBw6bptLTV3IaVkGtnPnWYRzjnJ9GS6J9O1PWGKpRUTFMKxop_mXgdtawOMAdDAMxhN1Zdhng=s16000" alt="">
+              <img class="size-full object-top object-cover" src="https://blogger.googleusercontent.com/img/a/AVvXsEiKM2MPrqLrQyZ7gXbiLpJWPe6pFBagmptAaUzmGeOPKEahK6YhdqgHclD9Omfvj0JMRTuThTuKEt8zQRriHjcnhqRsoseR69My15RM4aKogOPCB9Jmz3pA6R5ZRXh3AxdY1QHbaJN-6BpJX0DULybZ-e74VEXI6ZaqX8RlFVuZJpC3A_a6I7ffCqcVQQ=s16000" alt="">
             </div>
           </div>
         </div>
