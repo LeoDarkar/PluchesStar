@@ -17,18 +17,11 @@ export const routes: Routes = [
             {
                 path:'tables',
                 loadComponent: () => import('./business/tables/tables.component')
-            },
-            {
-                path: '',
-                redirectTo: 'sections',
-                pathMatch: 'full'
             }
-            
-
         ]
     },
     {
         path: '**',
-        redirectTo: 'sections'
+        redirectTo: ''
     }
 ];
