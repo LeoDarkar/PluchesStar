@@ -1,22 +1,22 @@
 <!-- layout.component.html -->
-<div class="min-h-screen bg-gray-50/50">
+<div class="min-h-screen bg-gray-50/50" style="background-image: url('https://marketplace.canva.com/EAFO3YDPBvA/1/0/1131w/canva-documento-a4-formas-circulares-multicolor-uCU6xvT3n_0.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;">
   <!-- Barra lateral -->
   <app-sidebar class="mt-16 z-40" [isSidebarOpen]="isSidebarOpen" (toggleSidebar)="toggleSidebar()"></app-sidebar>
 
   <!-- Contenedor principal -->
   <div  class="pt-2 p-2 transition-all duration-100 ">
       <!-- Barra del head fija en la parte superior -->
-      <nav class="block w-full  bg-white text-gray-700 shadow-md  ">
+      <nav class="block w-full  text-gray-700 shadow ">
         <app-head (toggleSidebar)="toggleSidebar()"></app-head>
       </nav>
     
     <!-- Contenido principal con margen superior para evitar superposición -->
-    <div class="mt-2  bg-white shadow-md">
+    <div class="mt-2 shadow">
       <router-outlet></router-outlet>
     </div>
     
     <!-- Pie de página -->
-    <div id="footer" class="text-blue-gray-600">
+    <div id="footer" class="mt-2 shadow text-blue-gray-600">
       <app-footer></app-footer>
     </div>
   </div>
