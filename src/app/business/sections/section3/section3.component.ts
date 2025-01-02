@@ -34,7 +34,6 @@ export default class Section3Component implements OnInit {
     try {
       this.provinciaService.getProvinciasList().subscribe(data => {
         this.provincias = data;
-        console.log(this.provincias); // Verifica que los datos se están recibiendo
         console.log('Provincias:', this.provincias); // Verifica que los datos se están recibiendo
       });
     } catch (error) {console.error('Error al obtener las provincias', error); }
@@ -56,6 +55,9 @@ export default class Section3Component implements OnInit {
     console.log(res);
    });
   }
-
+  
+  limpiarFormulario() {
+    this.datos.reset();
+  }
 }
 

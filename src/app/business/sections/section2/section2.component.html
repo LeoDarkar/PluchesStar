@@ -19,8 +19,8 @@
         <div class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 lg:rounded-l-[2rem]"></div>
       </div>
       <div class="relative max-lg:row-start-2 align-middle " >
-        <div class="absolute inset-px rounded-lg  max-lg:rounded-t-[2rem]" [style.background-image]="'url(' + ImagenFondoOso + ')'" style="background-size: contain; background-position: center;" ></div>
-        <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] justify-center" >
+        <div class="absolute inset-0 rounded-lg  max-lg:rounded-t-[2rem]" ></div>
+        <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] justify-center "  [style.background-image]="'url(' + ImagenFondoOso + ')'" style="background-size: cover;" >
             <div class="px-8 sm:px-10 max-lg:pb-12 lg:pb-2 "  >
             <p class="mt-2 text-xl font-medium tracking-tight text-gray-950 text-center py-4">Fabricación</p>
             <p class="mt-2 max-w-lg text-lg text-gray-600 text-center"><b>Normal:</b> 3 - 4 días.</p>
@@ -29,9 +29,9 @@
         </div>
         <div class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-t-[2rem]"></div>
       </div>
-      <div class="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2 " [style.background-image]="'url(' + ImagenFondoOso + ')'" style="background-size: contain; background-position: top;">
+      <div class="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2 " >
         <div class="absolute inset-px rounded-lg"></div>
-        <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]" >
+        <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]" [style.background-image]="'url(' + ImagenFondoOso + ')'" style="background-size: cover;" >
           <div class="px-8 pt-8 sm:px-10 sm:pt-10" >
             <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 text-center">Envios</p>
             <p class="mt-2 max-w-lg text-sm/6 text-gray-600 text-center pb-4">Realizamos envios a todo Ecuador por Servientrega y dentro de Quito por UberEntregas.</p>
@@ -48,8 +48,8 @@
         <div class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5"></div>
       </div>
       <div class="relative lg:row-span-2">
-        <div class="absolute inset-px rounded-lg bg-white max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]"></div>
-        <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]" [style.background-image]="'url(' + ImagenFondoOso + ')'" style="background-size: contain; background-position: top;">
+        <div class="absolute inset-px rounded-lg bg-white max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]" ></div>
+        <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]" [style.background-image]="'url(' + ImagenFondoOso + ')'" style="background-size: contain;">
           <div class="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10" >
             <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 text-center">Calificanos y Siguenos</p>
             <p class="mt-2 max-w-lg text-sm/6 text-gray-600 text-center">Puedes seguirnos en nuestras redes sociales y dejarnos tus comentarios.</p>
