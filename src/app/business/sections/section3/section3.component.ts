@@ -39,6 +39,11 @@ export default class Section3Component implements OnInit {
     } catch (error) {console.error('Error al obtener las provincias', error); }
 
     }
+  
+    limpiarFormulario() {
+    this.datos.reset();
+  }
+
   envioCorreo() {
     let params = {
       nombre: this.datos.value.nombre,
@@ -54,10 +59,9 @@ export default class Section3Component implements OnInit {
     this.httpClient.post('https://backend-peluchesstar.onrender.com/send-email', params).subscribe(res => {
     console.log(res);
    });
+   this.datos.reset();
   }
   
-  limpiarFormulario() {
-    this.datos.reset();
-  }
+
 }
 
