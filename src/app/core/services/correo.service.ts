@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CorreoService {
-  private apiUrl='https://backend-peluchesstar.onrender.com/emailRoutes';
+  private apiUrl='https://backend-peluchesstar.onrender.com/routes/emailRoutes';
 
   constructor(private http:HttpClient) { }
 
