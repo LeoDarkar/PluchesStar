@@ -57,9 +57,9 @@ export default class Section3Component implements OnInit {
     }
     console.log(params);
     this.httpClient.post('https://backend-peluchesstar.onrender.com/send-email', params).subscribe(res => {
-    console.log(res);
-   });
-   this.datos.reset();
+      console.log(res);
+      this.datos.reset(); // Limpia el formulario después de enviar el correo
+    });
   }
   
 
