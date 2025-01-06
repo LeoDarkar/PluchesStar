@@ -46,6 +46,3 @@ node_modules/
 .env
 dist/
 
-# Exclude everything in docs except the output directory
-/docs/*
-!/docs/
