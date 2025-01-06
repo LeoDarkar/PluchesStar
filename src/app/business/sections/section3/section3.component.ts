@@ -51,7 +51,7 @@ export default class Section3Component implements OnInit {
       asunto: this.datos.value.asunto,
     }
     console.log(params);
-    this.httpClient.post('http://localhost:3000/envio', params).subscribe(res => {
+    this.httpClient.post('https://backend-peluchesstar.onrender.com/send-email', params).subscribe(res => {
     console.log(res);
    });
   }
