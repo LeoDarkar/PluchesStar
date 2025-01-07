@@ -14,7 +14,7 @@
           Llena el siguiente formulario para hacer tu solicitud
         </h2>
         
-        <form [formGroup]="datos" submit="envioCorreo()" reset="limpiarFormulario()" >
+        <form [formGroup]="datos" (ngSubmit)="envioCorreo()" reset="limpiarFormulario()" >
           <div class="border-b border-gray-900/10 pb-12">
             <h2 class="mt-10 text-base/7 font-semibold text-gray-900">Información Personal</h2>
             <p class="mt-1 text-sm text-gray-600">Por favor, proporciona tus datos y describe tu solicitud con el mayor detalle posible.
