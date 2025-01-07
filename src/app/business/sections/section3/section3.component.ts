@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProvinciasEcService } from '../../../core/services/provincias-ec.service';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { CorreoService } from '../../../core/services/correo.service';
 import { NgForOf } from '@angular/common';
 
 @Component({
@@ -15,20 +16,20 @@ export default class Section3Component implements OnInit {
   provincias: any[] = [];
   datos:FormGroup; 
 
-  constructor(private provinciaService: ProvinciasEcService, // Inyecta el servicio de provincias 
-              private httpClient: HttpClient
-            ) {
-              this.datos = new FormGroup({
-                nombre: new FormControl('', Validators.required),
-                apellido:  new FormControl(''),
-                email:  new FormControl('', Validators.required),
-                numeroTelefono:  new FormControl('', Validators.required),
-                provincia:  new FormControl(''),
-                ciudad:  new FormControl(''),
-                direccion:  new FormControl('', Validators.required),
-                asunto:  new FormControl('', Validators.required),
-              });
-
+  constructor(
+    private provinciaService: ProvinciasEcService, // Inyecta el servicio de provincias
+    private correoService: CorreoService // Inyecta el servicio de correo
+  ) {
+    this.datos = new FormGroup({
+      nombre: new FormControl('', Validators.required),
+      apellido: new FormControl(''),
+      email: new FormControl('', [Validators.required, Validators.email]),
+      numeroTelefono: new FormControl('', Validators.required),
+      provincia: new FormControl(''),
+      ciudad: new FormControl(''),
+      direccion: new FormControl('', Validators.required),
+      asunto: new FormControl('', Validators.required),
+    });
   }
   ngOnInit(): void {
     try {
@@ -45,22 +46,32 @@ export default class Section3Component implements OnInit {
   }
 
   envioCorreo() {
-    let params = {
-      nombre: this.datos.value.nombre,
-      apellido: this.datos.value.apellido,
-      email: this.datos.value.email,
-      numeroTelefono: this.datos.value.numeroTelefono,
-      provincia: this.datos.value.provincia,
-      ciudad: this.datos.value.ciudad,
-      direccion: this.datos.value.direccion,
-      asunto: this.datos.value.asunto,
+    if (this.datos.valid) {
+      let params = {
+        nombre: this.datos.value.nombre,
+        apellido: this.datos.value.apellido,
+        email: this.datos.value.email,
+        numeroTelefono: this.datos.value.numeroTelefono,
+        provincia: this.datos.value.provincia,
+        ciudad: this.datos.value.ciudad,
+        direccion: this.datos.value.direccion,
+        asunto: this.datos.value.asunto,
+      };
+      console.log(params);
+      this.correoService.enviarCorreo(params).subscribe(
+        res => {
+          console.log(res);
+          this.limpiarFormulario(); // Limpia el formulario después de enviar el correo
+          alert('El correo ha sido enviado exitosamente.');
+        },
+        error => {
+          console.error('Error al enviar el correo', error);
+          alert('Hubo un error al enviar el correo. Por favor, inténtalo de nuevo.');
+        }
+      );
+    } else {
+      alert('Por favor, completa todos los campos requeridos.');
     }
-    console.log(params);
-    this.httpClient.post('https://backend-peluchesstar.onrender.com/send-email', params).subscribe(res => {
-      console.log(res);
-      this.datos.reset(); // Limpia el formulario después de enviar el correo
-    alert('El correo ha sido enviado exitosamente.');
-    });
   }
   
 
