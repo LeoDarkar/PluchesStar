@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProvinciasEcService } from '../../../core/services/provincias-ec.service';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
 import { CorreoService } from '../../../core/services/correo.service';
 import { NgForOf } from '@angular/common';
 
