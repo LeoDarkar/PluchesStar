@@ -1,6 +1,8 @@
-# Angular17App
+# Peluches Star - Angular 17 App
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.1.
+
+This project is an Angular 17 application named Peluches Star, developed for a plush toy sales company. The backend is built with Node.js, and the frontend uses Angular and Tailwind CSS.
 
 ## Development server
 
